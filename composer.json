@@ -1,5 +1,5 @@
 {
-    "name": "phwebs/silverstripe-graphql-jwt",
+    "name": "hpadev/silverstripe-graphql-jwt",
     "description": "JWT Authentication for GraphQL",
     "type": "silverstripe-vendormodule",
     "license": "bsd-3-clause",
