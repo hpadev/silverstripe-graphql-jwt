@@ -1,0 +1,33 @@
+mutations:
+  createToken:
+    description: 'Creates a JWT token for a valid user'
+    args:
+      Email: String!
+      Password: String!
+    resolver: ['Firesphere\GraphQLJWT\Resolver\Mutation\CreateToken', 'resolve']
+    type: memberToken
+  refreshToken:
+    description: 'Refreshes a JWT token for a valid user. To be done'
+    resolver: ['Firesphere\GraphQLJWT\Resolver\Mutation\RefreshToken', 'resolve']
+    type: memberToken
+
+types:
+  memberToken:
+    fields:
+      valid: Boolean
+      member: Member
+      token: String
+      status: String
+      code: Int
+      message: String
+
+# Not currently being used.
+# Using the class Firesphere\GraphQLJWT\Helpers\TokenStatusEnum instead
+enums:
+  tokenStatus:
+    values:
+      OK: 'JWT token is valid'
+      INVALID: 'JWT token is not valid'
+      EXPIRED: 'JWT token has expired, but can be renewed'
+      DEAD: 'JWT token has expired and cannot be renewed'
+      BAD_LOGIN: 'JWT token could not be created due to invalid login credentials'

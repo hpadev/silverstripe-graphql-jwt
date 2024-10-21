@@ -1,0 +1,8 @@
+---
+name: GraphQLJWT
+after:
+  - '#coresecurity'
+---
+SilverStripe\Security\Member:
+  extensions:
+    - Firesphere\GraphQLJWT\Extensions\MemberExtension

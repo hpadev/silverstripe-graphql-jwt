@@ -1,0 +1,5 @@
+SilverStripe\GraphQL\Schema\Schema:
+  schemas:
+    default:
+      src:
+        - ./vendor/hpadev/silverstripe-graphql-jwt/_graphql
